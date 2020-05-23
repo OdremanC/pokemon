@@ -2,10 +2,16 @@
 @value yellow, blue, white from colors;
 
 .home {
+  width: 100%;
   margin: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 60vh;
+}
+
+.main-container {
+  width: 100%;
+  min-height: 70vh;
+  display: block;
 }

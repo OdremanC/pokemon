@@ -1,7 +1,5 @@
 import React, { useState, useEffect, Fragment} from 'react';
 import { useTranslation } from "react-i18next";
-import Header from '../../components/Header/Header';
-import Footer from '../../components/Footer/Footer';
 import Loader from '../../components/Loader/Loader';
 import Paginator from '../../components/Paginator/Paginator';
 import PokemonModel from '../../models/pockemonModel';
@@ -18,9 +16,9 @@ const Home = () => {
   const [totalPokemons, setTotalPokemons] = useState(0);
   const [pokemonDetails, setPokemonDetails] = useState({});
   const [modeList, setMode] = useState(true);
-  const {t}= useTranslation();  
   const pageCount = Math.ceil(totalPokemons / RESULT_LIMIT);
-
+  const {t}= useTranslation(); 
+  
   useEffect(() => {
     async function getPokemonsData() {
       setLoading(true);
@@ -52,30 +50,30 @@ const Home = () => {
   return (
     <Fragment>
       <Loader loading={loading} t={t}/>
-      <Header/>
-      {
-        modeList ?
-        <List 
-          data={pokemonList}
-          selected={pokemonSelected}
-          getSelectedPokemon={(url, id) => setPokemonSelected(url, id) }
-        />
-        :
-        <Details 
-          t={t}
-          selected={pokemonSelected}
-          detail={pokemonDetails}
-          getSelectedPokemon={(url, id) => setPokemonSelected(url, id) }
-        />
+      <div className="main-container">
+        {
+          modeList ?
+          <List 
+            data={pokemonList}
+            selected={pokemonSelected}
+            getSelectedPokemon={(url, id) => setPokemonSelected(url, id) }
+          />
+          :
+          <Details 
+            t={t}
+            selected={pokemonSelected}
+            detail={pokemonDetails}
+            getSelectedPokemon={(url, id) => setPokemonSelected(url, id) }
+          />
 
-      }
-    
+        }
+      </div>    
       <Paginator 
         pageCount={pageCount} 
         limit={RESULT_LIMIT}
         t={t}
-        callback={(value) => setOffset(value)}/>
-      <Footer t={t} />
+        callback={(value) => setOffset(value)}
+      />
     </Fragment>
   );
 }

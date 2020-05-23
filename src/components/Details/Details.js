@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './styles.css';
+import './styles.scss';
+import classNames from 'classnames';
 import notAvailableImage from '../../assets/images/imageNotAvailable.jpg'
 
 function Details({getSelectedPokemon = ()=>{},t=()=>{}, selected={}, detail={}}) {
@@ -10,8 +11,8 @@ function Details({getSelectedPokemon = ()=>{},t=()=>{}, selected={}, detail={}})
   }
 
   return (
-    <div onClick={(e) => getSelectedPokemon(e)} className={selectedCard ? 'cardSelected' : 'cardNotSelected'}>
-      <div className='container'>
+    <div onClick={(e) => getSelectedPokemon(e)} className='pokemon-detail-container'>
+      <div className={classNames('pokemon-detail', { cardSelected: selectedCard })}>
         <div className='image'>
           <img src={`https://pokeres.bastionbot.org/images/pokemon/${selected.id}.png`} alt={selected.name} 
             onError={(e)=>{e.target.onerror = null; e.target.src=notAvailableImage}} 
