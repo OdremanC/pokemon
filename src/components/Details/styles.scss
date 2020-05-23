@@ -12,7 +12,8 @@
   margin: 0 auto;
   display: flex;
   border: 3px solid yellow;
-  position: absolute;
+  transform: translateX(-10%);
+  transition: transform .8s ease, opacity .8s ease;
 }
 
 .pokemon-detail.cardSelected {
@@ -21,9 +22,15 @@
   display: flex;
   position: relative;
   animation: showCard 1s ease-in;
+  transform: translateX(0);
 }
 
 @keyframes showCard {
+  0% { opacity: 0;  transform: translateX(-10%);}
+  100% { opacity: 1; transform: translateX(0);}
+}
+
+@keyframes hideCard {
   0% { opacity: 0;  transform: translateX(-10%);}
   100% { opacity: 1; transform: translateX(0);}
 }
