@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Header.module.css";
+import styles from "./Header.module.scss";
 import logo from "../../assets/images/logo.png"
 import esflag from "../../assets/images/esflag.jpg"
 import enflag from "../../assets/images/enflag.jpg"

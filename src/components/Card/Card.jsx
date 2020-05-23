@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Card.module.css';
+import styles from './Card.module.scss';
 import notAvailableImage from '../../assets/images/imageNotAvailable.jpg'
 
 const Card = ({name, id, onSelect, selectedClass}) => (

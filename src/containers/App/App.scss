@@ -1,0 +1,49 @@
+.App {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .header {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: rgb(0, 102, 255);
+  }
+  
+  .main {
+    flex-direction: row;
+    padding: 5px;
+    max-width: 84%;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  aside {
+    display: inline-flex;
+    align-items: flex-start;
+    overflow-y: scroll;
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .content {
+    position: relative;
+    flex: 1 auto;
+    width: 100%;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  footer {
+    position: flex;
+    width: 100%;
+    margin-top: 5px;
+    padding: 5px;
+  }

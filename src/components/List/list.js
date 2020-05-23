@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import Card from '../Card/Card';
-import './styles.css';
+import './styles.scss';
 
 function List({data = [], getSelectedPokemon = () => {}, selected = {} }){
   const onSelectPokemon = useCallback((url = '', id= 0, name = '') =>{

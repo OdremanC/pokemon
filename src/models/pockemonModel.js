@@ -1,4 +1,4 @@
-import { RESULT_LIMIT as limit } from '../utils/constants';
+//import { RESULT_LIMIT as limit } from '../utils/constants';
 import axios from 'axios';
 
 class PockemonModel {
@@ -8,8 +8,9 @@ class PockemonModel {
    * @param {Number} offset 
    */
   static async getPokemons(offset) {
+    const limit = 0;
     try {
-      return await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
+      return await axios.get(`https://pokeapi.co/api/v2/pokemon`);
     } catch (error) {
       console.log(error);
       return error;
