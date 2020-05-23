@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import './styles.scss';
 import classNames from 'classnames';
 import notAvailableImage from '../../assets/images/imageNotAvailable.jpg'
 
 function Details({getSelectedPokemon = ()=>{},t=()=>{}, selected={}, detail={}}) {
   const [selectedCard, setSelected] = useState(true);
-  const handleSelected = () => {
-    getSelectedPokemon();
+  const handleSelected = useCallback((url = '', id= 0, name = '') =>{
+    getSelectedPokemon({url, id, name});
     setSelected(!selectedCard);
-  }
+  })
 
   return (
-    <div onClick={(e) => getSelectedPokemon(e)} className='pokemon-detail-container'>
+    <div className='pokemon-detail-container'>
       <div className={classNames('pokemon-detail', { cardSelected: selectedCard })}>
         <div className='image'>
           <img src={`https://pokeres.bastionbot.org/images/pokemon/${selected.id}.png`} alt={selected.name} 

@@ -13,7 +13,6 @@
   display: flex;
   border: 3px solid yellow;
   position: absolute;
-  left: 100%;
 }
 
 .pokemon-detail.cardSelected {
@@ -21,8 +20,12 @@
   cursor: default;
   display: flex;
   position: relative;
-  left: auto;
-  transition: opacity .8s ease, left .8s ease;
+  animation: showCard 1s ease-in;
+}
+
+@keyframes showCard {
+  0% { opacity: 0;  transform: translateX(-10%);}
+  100% { opacity: 1; transform: translateX(0);}
 }
 
 .image {
