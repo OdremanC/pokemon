@@ -1,0 +1,29 @@
+.paginator li a{
+    color: yellow;
+    cursor: pointer;
+    outline: none;
+    font-size: 14px;
+}
+
+.paginator{
+    background-color: blue;
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.paginator li{
+    padding: 5px 7px;
+}
+  
+.paginator li.pageSelected a{
+    cursor: default;
+    color: white;
+}
+  
+@media (max-width: 415px) and (max-height: 738px) and (orientation: portrait) {
+    .paginator li a{
+      font-size: 12px;
+    }
+}

@@ -1,0 +1,144 @@
+@value colors: "../../assets/styles/variables.css";
+@value yellow, blue, white from colors;
+
+.card {
+    width: 14%;
+    box-sizing: border-box;
+    margin: 20px;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.description{
+  border: 3px solid yellow;
+  padding: 20px 20px 10px 20px;
+}
+
+.card img{
+  width: 100%;
+  height: auto;
+}
+.card h2{
+  text-align: center;
+  text-transform: capitalize;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: blue;
+  padding-top: 10px;
+}
+
+.details{
+  padding: 20px;
+  font-size: 14px;
+  border: 3px solid yellow;
+  border-left: none;
+  width: 320px;
+  animation: detailsAn 0.8s ease-in-out;
+}
+
+.details h3{
+  padding: 5px 0;
+}
+
+.details h4{
+  font-weight: bold;
+  color: blue;
+  cursor: pointer;
+  text-align: center;
+  margin-top: 20px;
+  background-color: yellow;
+  padding: 5px 0;
+}
+
+.details h3 span{
+  font-weight: bold;
+}
+
+.cardSelected{
+  width: 40%;
+  cursor: default;
+  animation: cardSelectedAn 0.8s ease-in-out;
+  flex-shrink: 0;
+  margin: 0 25%;
+  display: flex;
+}
+.cardSelected .description{
+  width: 60%;
+}
+
+.cardNotSelected{
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  height: 0;
+  animation: notSelectedAn 0.4s ease-in-out;
+}
+
+@keyframes cardSelectedAn {
+  0% {width: 14%; flex-shrink: inherit; margin: 0;}
+  50% {opacity: 0; width: 14%; flex-shrink: inherit; margin: 0;}
+  51% {width: 40%; flex-shrink: 0; margin: 0 25%;}
+  100% {opacity: 1; flex-shrink: 0; margin: 0 25%}
+}
+
+@keyframes detailsAn {
+  0% {opacity: 0; height: 0; padding: 0; width: 0;}
+  49% {opacity: 0; height: 0; padding: 0; width: 0;}
+  50% {opacity: 0; height: auto; padding: 20px; width: 320px;}
+  99% {opacity: 0; height: auto; padding: 20px; width: 320px;}
+  100% {opacity: 1; height: auto; padding: 20px; width: 320px;}
+}
+
+@keyframes notSelectedAn {
+  0% {
+    opacity: 1;
+    width: 16%;
+    padding: 20px 20px 10px 20px;
+    height: auto;
+}
+  99% {
+    width: 14%;
+    padding: 20px 20px 10px 20px;
+    height: auto;
+  }
+  100% {
+    opacity: 0;
+    width: 0;
+    padding: 0;
+    height: 0;
+  }
+}
+
+
+
+
+@media (max-width: 812px) and (max-height: 440px) and (orientation: landscape) {
+  .card{ width: 40%; margin: 2%;}
+  .description{padding: 5px;}
+}
+
+@media (max-width: 769px) and (max-height: 1025px) and (orientation: portrait) {
+  .card{ width: 60%; margin: 2%; flex-direction: wrap;}
+  .card img{width: 100%; height: auto; padding:10;}
+  .card h2 { font-size: 25px; margin-bottom: 10px;}
+  .description{padding: 5px;}
+  .cardSelected{
+    width: 60%;
+    margin: 0 25%;
+  }
+}
+
+@media (max-width: 415px) and (max-height: 738px) and (orientation: portrait) {
+  .card{ width: 60%; margin: 0; flex-direction: column; margin-bottom: 3%;}
+  .description{padding: 5px;}
+  .cardSelected{
+    width: 90%;
+    margin: 0 25%;
+  }
+  .card h2{
+    font-size: 14px;
+  }
+}

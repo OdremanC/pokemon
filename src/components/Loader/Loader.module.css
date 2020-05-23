@@ -1,0 +1,23 @@
+@value colors: "../../assets/styles/variables.css";
+@value lightGrey from colors;
+
+.loader{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0,0,0, 0.8);
+}
+.loader img{
+    width: 100px;
+}
+.loader h4{
+    font-weight: 600;
+    color: lightGrey;
+}
+.loader.show{
+    display: flex;
+}
