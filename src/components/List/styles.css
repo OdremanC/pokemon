@@ -2,7 +2,6 @@
 @value yellow, blue, white from colors;
 
 .home {
-  margin: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
