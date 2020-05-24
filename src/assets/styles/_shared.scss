@@ -1,0 +1,47 @@
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: visible;
+    width: 100%;
+    max-width: 20%;
+    padding: 5px;
+    .logo{
+        max-width: 200px;
+        position: absolute;
+        top: -55px;
+    }
+}
+
+.btnLang, .btnLang:active, .btnLang:focus{
+    margin: -28px -20px 0 0;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    display: block;
+    float: right;
+}
+.btnLang img{
+    width: 25px;
+    height: 16px;
+    display: inline-block;
+}
+
+.widgets-container {
+    width: 80%;
+    display: flex;
+    height: 65vh;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    overflow-x: visible;
+    .widget {
+        background: #ffffffd6;
+        height: 100%;
+        margin: 0;
+        border-radius: 20px;
+    }
+}

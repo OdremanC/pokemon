@@ -1,10 +1,18 @@
+@import '../../assets/styles/_shared';
+@import '../../assets/styles/_mixin';
+@import '../../assets/styles/variable';
+@import '../../assets/styles/main.css';
+
+body{ margin: 0; padding: 0; }
+
 .App {
+  @include background('../../assets/images/bg.jpg');
     display: flex;
     text-align: center;
-    flex-direction: column;
-    flex-flow: row wrap;
-    padding: 10px;
-    margin: 10px;
+    flex-flow: column wrap;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
   }
   
   .header {
@@ -17,18 +25,10 @@
   .main {
     flex-direction: row;
     padding: 5px;
-    max-width: 84%;
+    width: 100%;
+    max-width: 75%;
     justify-content: center;
     align-items: center;
-  }
-  
-  aside {
-    display: inline-flex;
-    align-items: flex-start;
-    overflow-y: scroll;
-    width: 200px;
-    padding: 5px;
-    margin-right: 10px;
   }
   
   .content {
