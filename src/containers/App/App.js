@@ -1,21 +1,13 @@
-import React, { Suspense, useState  } from 'react';
-import { useTranslation } from "react-i18next";
-import Loader from '../../components/Loader/Loader';
-
+import React, { Suspense  } from 'react';
 import Widgets from './Widgets';
-
 import './App.scss';
 
 
 const App = ({children}) => {
-  const [loading, setLoading] = useState(true);
-  const {t}= useTranslation();
-  
   return (
     <Suspense>
       <div className="App">
-        <Loader loading={loading} t={t}/>
-        <Widgets setLoading={setLoading}/>
+        <Widgets />
       </div>      
     </Suspense>
   );

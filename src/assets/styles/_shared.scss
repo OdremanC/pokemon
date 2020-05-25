@@ -4,15 +4,9 @@
     flex-direction: column;
     position: relative;
     align-items: center;
+    justify-content: center;
     overflow-x: visible;
-    width: 100%;
-    max-width: 20%;
-    padding: 5px;
-    .logo{
-        max-width: 200px;
-        position: absolute;
-        top: -55px;
-    }
+    height: 40%;
 }
 
 .btnLang, .btnLang:active, .btnLang:focus{
@@ -34,13 +28,21 @@
     width: 80%;
     display: flex;
     height: 65vh;
-    flex-flow: row wrap;
+    flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     overflow-x: visible;
+    position: relative;
+    background: #ffffffd6;
+    border-radius: 20px;
+    .logo{
+        max-width: 200px;
+        position: absolute;
+        top: -55px;
+        z-index: 11;
+    }
     .widget {
-        background: #ffffffd6;
-        height: 100%;
-        border-radius: 20px;
+        width: 100%;
     }
 }
 

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { getPokemonList, RESULT_LIMIT } from '../../utils/constants';
-import i18n from '../../utils/i18n'
 import { useTranslation } from "react-i18next";
+import i18n from '../../utils/i18n'
 import PokemonModel from '../../models/pockemonModel';
 import logo from "../../assets/images/logo.png"
 import esflag from "../../assets/images/esflag.jpg"
@@ -9,9 +9,10 @@ import enflag from "../../assets/images/enflag.jpg"
 import Home from '../Home/Home';
 import Paginator from '../../components/Paginator/Paginator';
 import Menu from '../../components/Menu/Menu';
+import Loader from '../../components/Loader/Loader';
 
 export const Widgets = (props) => {
-  const { setLoading } = props;
+  const [loading, setLoading] = useState(true);
   const [pokemonList, setPokemonList] = useState([]);
   const [pokemonSelected, setPokemonSelected] = useState({});
   const [pokemonDetails, setPokemonDetails] = useState({});
@@ -56,16 +57,11 @@ export const Widgets = (props) => {
 
   return (
     <div className='widgets-container'>
-      <div className='search-container widget'>
-        <img className='logo' src={logo} alt="Logo" />
-        <button className='btnLang' onClick={(e) => { changeLanguage(e) }}>
-          <img src={i18n.language === 'en' ? esflag : enflag} alt="language" />
-        </button>
-        <Menu
-          data={pokemonList}
-          getPokemon={(item) => setPokemonSelected(item)}
-        />
-      </div>
+      <Loader loading={loading} t={t}/>
+      <img className='logo' src={logo} alt="Logo" />
+      <button className='btnLang' onClick={(e) => { changeLanguage(e) }}>
+        <img src={i18n.language === 'en' ? esflag : enflag} alt="language" />
+      </button>
       <div className="main widget">
         <section className="content">
           <Home
@@ -75,13 +71,19 @@ export const Widgets = (props) => {
           />
         </section>
       </div>
-      <div className="container-paginator">
-      <Paginator 
-        pageCount={pageCount}
-        limit={RESULT_LIMIT}
-        t={t}
-        callback={(value) => setOffset(value)}
-      />
+      <div className='search-container widget'>
+        <Menu
+          data={pokemonList}
+          getPokemon={(item) => setPokemonSelected(item)}
+        />
+        <div className="container-paginator">
+          <Paginator
+            pageCount={pageCount}
+            limit={RESULT_LIMIT}
+            t={t}
+            callback={(value) => setOffset(value)}
+          />
+        </div>
       </div>
     </div>
   )

@@ -24,11 +24,9 @@ body{ margin: 0; padding: 0; }
   
   .main {
     flex-direction: row;
-    padding: 5px;
-    width: 100%;
-    max-width: 75%;
     justify-content: center;
     align-items: center;
+    height: 60%;
   }
   
   .content {
