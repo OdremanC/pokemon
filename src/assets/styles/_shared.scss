@@ -4,7 +4,6 @@
     flex-direction: column;
     position: relative;
     align-items: center;
-    justify-content: space-between;
     overflow-x: visible;
     width: 100%;
     max-width: 20%;
@@ -41,7 +40,11 @@
     .widget {
         background: #ffffffd6;
         height: 100%;
-        margin: 0;
         border-radius: 20px;
     }
+}
+
+.container-paginator {
+    margin-top: 25px;
+    width: 98%;
 }

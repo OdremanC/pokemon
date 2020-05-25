@@ -1,6 +1,4 @@
 .pokemon-detail-container {
-  display: block;
-  width: 100%;
   position: relative;
 }
 
@@ -9,7 +7,7 @@
   overflow: hidden;
   width: 40%;
   cursor: default;
-  margin: 0 auto;
+  margin: 5% auto;
   display: flex;
   transform: translateX(-10%);
   transition: transform .8s ease, opacity .8s ease;
@@ -35,8 +33,7 @@
 }
 
 .image {
-  width: 50%;
-  padding: 20px;
+  width: 100%;
 }
 
 .pokemon-detail img {
@@ -52,7 +49,7 @@
     height: 95%;
     margin-left: 20px;
     margin-top: 0;
-    padding: 20px 20px 0 20px;
+    padding: 0 20px 0 20px;
     font-size: 14px;
     width: 300px;
 }

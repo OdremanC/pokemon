@@ -1,7 +1,7 @@
 import React, { Fragment} from 'react';
 import { useTranslation } from "react-i18next";
 import Details from '../../components/Details/Details';
-import './styles.css';
+import './styles.scss';
 
 const Home = ({selected={}, pokemonDetails={}, callback = () => {}}) => {
   const {t}= useTranslation(); 

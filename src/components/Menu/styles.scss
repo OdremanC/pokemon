@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
     margin-right: 5px;
   }
   
   .menu-item-container {
     width: 100%;
     margin: 1px;
+    margin-top: 40%;
   }
   
   .menu-item {
@@ -33,7 +33,6 @@
   .items {
     width: 80%;
     max-height: 65%;
-    overflow: scroll;
   }
 
 .btnLang {

@@ -1,6 +1,6 @@
 import React, {useCallback} from 'react';
 import ReactPaginate from 'react-paginate';
-import './styles.css';
+import './styles.scss';
 
 function Paginator({pageCount = 0, limit = 0, t = () => {}, callback = () => {}}) {
   const showOnPageChange = useCallback((selected) =>{

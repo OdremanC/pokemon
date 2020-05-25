@@ -32,9 +32,6 @@ function MenuApp(props) {
   }
   return(
     <div className="menu-container">
-      <div className="search">
-        Search
-      </div>
       <div className="items">
           <Menuitems {...props} callback={(value)=> handlePokemonSelected(value)}/>
       </div>
