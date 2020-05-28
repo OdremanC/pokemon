@@ -5,3 +5,10 @@
         repeat: $repeat;
     }
 }
+
+@mixin media_breakpoint($screen) {
+    @media (max-width: $screen+"px") {
+      @content;
+    }
+  }
+  

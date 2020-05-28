@@ -1,3 +1,5 @@
+@import '../../assets/styles/mixin';
+
 .paginator li a{
     color: black;
     cursor: pointer;
@@ -7,7 +9,6 @@
 
 .paginator{
     opacity: 80%;
-    border-radius: 10px;
     margin: 0 auto;
     list-style: none;
     display: flex;
@@ -24,8 +25,18 @@
     font-weight: bold;
 }
   
-@media (max-width: 415px) and (max-height: 738px) and (orientation: portrait) {
-    .paginator li a{
-      font-size: 12px;
-    }
+@include media_breakpoint(479) { 
+    .paginator li a{ font-size: 22px; }
+    .paginator { margin-bottom: 15%;}
+}
+
+@include media_breakpoint(767) { 
+    .paginator li a{ font-size: 14px; }
+    .paginator { margin-bottom: 15%;}
+}
+
+
+@include media_breakpoint(1024) { 
+    .paginator li a{ font-size: 14px; }
+    .paginator { margin-bottom: 15%;}
 }

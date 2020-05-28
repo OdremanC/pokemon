@@ -1,6 +1,7 @@
 //import { RESULT_LIMIT as limit } from '../utils/constants';
 import axios from 'axios';
 import { RESULT_LIMIT } from '../utils/constants';
+
 class PockemonModel {
 
   /**
@@ -8,7 +9,6 @@ class PockemonModel {
    * @param {Number} offset 
    */
   static async getPokemons(offset = 0) {
-
     try {
       return await axios.get(`https://pokeapi.co/api/v2/pokemon?limit=${RESULT_LIMIT}&offset=${offset}`);
     } catch (error) {

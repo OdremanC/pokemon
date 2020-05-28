@@ -13,35 +13,76 @@ body{ margin: 0; padding: 0; }
     justify-content: center;
     height: 100vh;
     align-items: center;
-  }
+}
   
-  .header {
-    width: 100%;
-    padding: 5px;
-    margin-bottom: 5px;
-    background-color: rgb(0, 102, 255);
+.search-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow-x: visible;
+  height: 40%;
+}
+
+.btnLang, .btnLang:active, .btnLang:focus{
+  margin: -28px -20px 0 0;
+  background-color: $transparent;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+  display: block;
+  float: right;
+}
+.btnLang img{
+  width: 25px;
+  height: 16px;
+  display: inline-block;
+}
+
+.widgets-container {
+  width: 80%;
+  display: flex;
+  height: 65vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  overflow-x: visible;
+  position: relative;
+  background: $whiteOpacity;
+  border-radius: 20px;
+  .logo{
+      max-width: 200px;
+      position: absolute;
+      top: -55px;
+      z-index: 11;
   }
-  
-  .main {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 60%;
+  .widget {
+      width: 100%;
   }
-  
-  .content {
-    position: relative;
-    flex: 1 auto;
-    width: 100%;
-  }
-  
-  a {
-    text-decoration: none;
-  }
-  
-  footer {
-    position: flex;
-    width: 100%;
-    margin-top: 5px;
-    padding: 5px;
-  }
+}
+
+.container-paginator {
+  margin-top: 25px;
+  width: 98%;
+}
+
+.footer {
+  margin-top: 20px;
+}
+
+.no-search {
+  height: 48.5vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-radius: 20%;
+}
+
+@include media_breakpoint(608) { 
+  .search-container {width: 10%;}
+}
+
+@include media_breakpoint(479) { 
+  .search-container {width: 10%;}
+}

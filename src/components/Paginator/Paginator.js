@@ -2,7 +2,7 @@ import React, {useCallback} from 'react';
 import ReactPaginate from 'react-paginate';
 import './styles.scss';
 
-function Paginator({pageCount = 0, limit = 0, t = () => {}, callback = () => {}}) {
+export default function Paginator ({pageCount = 0, limit = 0, t = () => {}, callback = () => {}}) {
   const showOnPageChange = useCallback((selected) =>{
     let newOffset = (selected) * limit;
     callback(newOffset);
@@ -20,4 +20,3 @@ function Paginator({pageCount = 0, limit = 0, t = () => {}, callback = () => {}}
     />
   )
 }
-export default Paginator;

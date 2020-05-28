@@ -2,9 +2,8 @@ import React from 'react';
 import style from './Loader.module.css'
 import loader from "../../assets/images/loading.gif"
 
-const Loader = ({loading = false, t = ()=>{} }) => {
+function Loader ({t = ()=>{} }) {
   return(
-    loading &&
     <div className={style.loader}>
         <img src={loader} alt="Loader"/>
         <h4>{t('Cargando...')}</h4>

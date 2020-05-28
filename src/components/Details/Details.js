@@ -1,23 +1,15 @@
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import './styles.scss';
-import classNames from 'classnames';
-import notAvailableImage from '../../assets/images/imageNotAvailable.jpg'
+import notAvailableImage from '../../assets/images/imageNotAvailable.jpg';
 
-function Details({getSelectedPokemon = ()=>{},t=()=>{}, selected={}, detail={}}) {
-  const [selectedCard, setSelected] = useState(true);
-  const handleSelected = useCallback((url = '', id= 0, name = '') =>{
-    getSelectedPokemon({url, id, name});
-    setSelected(!selectedCard);
-  })
-
+function Details({ t=()=>{}, selected={}, detail={}}) {
   return (
     <div className='pokemon-detail-container'>
-      <div className={classNames('pokemon-detail', { cardSelected: selectedCard })}>
+      <div className={'pokemon-detail cardSelected'}>
         <div className='image'>
           <img src={`https://pokeres.bastionbot.org/images/pokemon/${selected.id}.png`} alt={selected.name} 
             onError={(e)=>{e.target.onerror = null; e.target.src=notAvailableImage}} 
           />
-          <h2>{selected.name}</h2>
         </div>
         <div className='detail'>
           <h3>{`${t('Altura')}:`} <span>{`${detail.height / 10}m`}</span></h3>
@@ -30,7 +22,6 @@ function Details({getSelectedPokemon = ()=>{},t=()=>{}, selected={}, detail={}})
               <h3 key={key}>{`${t('Habilidad oculta')}:`} <span>{ability.name}</span></h3>
             )
           }
-          <h4 onClick={()=>{ handleSelected() }}>{t('Cerrar')}</h4>
         </div>
       </div>
     </div>

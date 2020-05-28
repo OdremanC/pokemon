@@ -1,14 +1,12 @@
 import React from 'react';
-import Home from './Home';
+import App from './App';
 import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('<Home />', () => {
-
+describe('<App />', () => {
     it('matches snapshot', () => {
-        const wrapper = shallow(<Home />);
+        const wrapper = shallow(<App />);
         expect(wrapper).toMatchSnapshot();
-    });
-    
-})
+    }); 
+});

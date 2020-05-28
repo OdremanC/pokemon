@@ -16,6 +16,7 @@ i18n
           "Cerrar": "Close",
           "Anterior": "Previous",
           "Siguiente": "Next",
+          "Bienvenido": "Wellcome",
           "": "",
         }
       }
