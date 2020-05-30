@@ -1,0 +1,703 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> matches snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="widgets-container"
+        >
+          <img
+            alt="Logo"
+            className="logo"
+            src="logo.png"
+          />
+          <button
+            className="btnLang"
+            onClick={[Function]}
+          >
+            <img
+              alt="language"
+              src="enflag.jpg"
+            />
+          </button>
+          <div
+            className="main widget"
+          >
+            <section
+              className="content"
+            >
+              <div
+                className="no-search"
+              >
+                <h3>
+                  Bienvenido
+                </h3>
+              </div>
+            </section>
+          </div>
+          <div
+            className="search-container widget"
+          >
+            <MenuApp
+              data={Array []}
+              getPokemon={[Function]}
+            />
+            <div
+              className="container-paginator"
+            >
+              <Paginator
+                callback={[Function]}
+                limit={5}
+                pageCount={0}
+                t={[Function]}
+              />
+            </div>
+          </div>
+        </div>,
+        <div
+          className="footer"
+        >
+          <Footer
+            t={[Function]}
+          />
+        </div>,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Logo"
+              className="logo"
+              src="logo.png"
+            />,
+            <button
+              className="btnLang"
+              onClick={[Function]}
+            >
+              <img
+                alt="language"
+                src="enflag.jpg"
+              />
+            </button>,
+            <div
+              className="main widget"
+            >
+              <section
+                className="content"
+              >
+                <div
+                  className="no-search"
+                >
+                  <h3>
+                    Bienvenido
+                  </h3>
+                </div>
+              </section>
+            </div>,
+            <div
+              className="search-container widget"
+            >
+              <MenuApp
+                data={Array []}
+                getPokemon={[Function]}
+              />
+              <div
+                className="container-paginator"
+              >
+                <Paginator
+                  callback={[Function]}
+                  limit={5}
+                  pageCount={0}
+                  t={[Function]}
+                />
+              </div>
+            </div>,
+          ],
+          "className": "widgets-container",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Logo",
+              "className": "logo",
+              "src": "logo.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="language"
+                src="enflag.jpg"
+              />,
+              "className": "btnLang",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "language",
+                "src": "enflag.jpg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <section
+                className="content"
+              >
+                <div
+                  className="no-search"
+                >
+                  <h3>
+                    Bienvenido
+                  </h3>
+                </div>
+              </section>,
+              "className": "main widget",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <div
+                  className="no-search"
+                >
+                  <h3>
+                    Bienvenido
+                  </h3>
+                </div>,
+                "className": "content",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <h3>
+                    Bienvenido
+                  </h3>,
+                  "className": "no-search",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Bienvenido",
+                  },
+                  "ref": null,
+                  "rendered": "Bienvenido",
+                  "type": "h3",
+                },
+                "type": "div",
+              },
+              "type": "section",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <MenuApp
+                  data={Array []}
+                  getPokemon={[Function]}
+                />,
+                <div
+                  className="container-paginator"
+                >
+                  <Paginator
+                    callback={[Function]}
+                    limit={5}
+                    pageCount={0}
+                    t={[Function]}
+                  />
+                </div>,
+              ],
+              "className": "search-container widget",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "data": Array [],
+                  "getPokemon": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Paginator
+                    callback={[Function]}
+                    limit={5}
+                    pageCount={0}
+                    t={[Function]}
+                  />,
+                  "className": "container-paginator",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "callback": [Function],
+                    "limit": 5,
+                    "pageCount": 0,
+                    "t": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "div",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Footer
+            t={[Function]}
+          />,
+          "className": "footer",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "t": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="widgets-container"
+          >
+            <img
+              alt="Logo"
+              className="logo"
+              src="logo.png"
+            />
+            <button
+              className="btnLang"
+              onClick={[Function]}
+            >
+              <img
+                alt="language"
+                src="enflag.jpg"
+              />
+            </button>
+            <div
+              className="main widget"
+            >
+              <section
+                className="content"
+              >
+                <div
+                  className="no-search"
+                >
+                  <h3>
+                    Bienvenido
+                  </h3>
+                </div>
+              </section>
+            </div>
+            <div
+              className="search-container widget"
+            >
+              <MenuApp
+                data={Array []}
+                getPokemon={[Function]}
+              />
+              <div
+                className="container-paginator"
+              >
+                <Paginator
+                  callback={[Function]}
+                  limit={5}
+                  pageCount={0}
+                  t={[Function]}
+                />
+              </div>
+            </div>
+          </div>,
+          <div
+            className="footer"
+          >
+            <Footer
+              t={[Function]}
+            />
+          </div>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Logo"
+                className="logo"
+                src="logo.png"
+              />,
+              <button
+                className="btnLang"
+                onClick={[Function]}
+              >
+                <img
+                  alt="language"
+                  src="enflag.jpg"
+                />
+              </button>,
+              <div
+                className="main widget"
+              >
+                <section
+                  className="content"
+                >
+                  <div
+                    className="no-search"
+                  >
+                    <h3>
+                      Bienvenido
+                    </h3>
+                  </div>
+                </section>
+              </div>,
+              <div
+                className="search-container widget"
+              >
+                <MenuApp
+                  data={Array []}
+                  getPokemon={[Function]}
+                />
+                <div
+                  className="container-paginator"
+                >
+                  <Paginator
+                    callback={[Function]}
+                    limit={5}
+                    pageCount={0}
+                    t={[Function]}
+                  />
+                </div>
+              </div>,
+            ],
+            "className": "widgets-container",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Logo",
+                "className": "logo",
+                "src": "logo.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="language"
+                  src="enflag.jpg"
+                />,
+                "className": "btnLang",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "language",
+                  "src": "enflag.jpg",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <section
+                  className="content"
+                >
+                  <div
+                    className="no-search"
+                  >
+                    <h3>
+                      Bienvenido
+                    </h3>
+                  </div>
+                </section>,
+                "className": "main widget",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <div
+                    className="no-search"
+                  >
+                    <h3>
+                      Bienvenido
+                    </h3>
+                  </div>,
+                  "className": "content",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <h3>
+                      Bienvenido
+                    </h3>,
+                    "className": "no-search",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Bienvenido",
+                    },
+                    "ref": null,
+                    "rendered": "Bienvenido",
+                    "type": "h3",
+                  },
+                  "type": "div",
+                },
+                "type": "section",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <MenuApp
+                    data={Array []}
+                    getPokemon={[Function]}
+                  />,
+                  <div
+                    className="container-paginator"
+                  >
+                    <Paginator
+                      callback={[Function]}
+                      limit={5}
+                      pageCount={0}
+                      t={[Function]}
+                    />
+                  </div>,
+                ],
+                "className": "search-container widget",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "data": Array [],
+                    "getPokemon": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Paginator
+                      callback={[Function]}
+                      limit={5}
+                      pageCount={0}
+                      t={[Function]}
+                    />,
+                    "className": "container-paginator",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "callback": [Function],
+                      "limit": 5,
+                      "pageCount": 0,
+                      "t": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": "div",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Footer
+              t={[Function]}
+            />,
+            "className": "footer",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "t": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;

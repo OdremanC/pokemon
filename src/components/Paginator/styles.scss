@@ -1,0 +1,41 @@
+@import '../../assets/styles/mixin';
+
+.paginator li a{
+    color: black;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+}
+
+.paginator{
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.paginator li{
+    padding: 5px 7px;
+}
+  
+.paginator li.pageSelected a{
+    cursor: default;
+    color: red;
+    font-weight: bold;
+}
+  
+@include media_breakpoint(490) { 
+    .paginator li a{ font-size: 11px; }
+    .paginator { margin-bottom: 15%;}
+}
+
+@include media_breakpoint(767) { 
+    .paginator li a{ font-size: 14px; }
+    .paginator { margin-bottom: 15%;}
+}
+
+
+@include media_breakpoint(1024) { 
+    .paginator li a{ font-size: 14px; }
+    .paginator { margin-bottom: 15%;}
+}

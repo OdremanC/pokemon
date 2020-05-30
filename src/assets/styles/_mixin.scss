@@ -1,0 +1,14 @@
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+
+@mixin media_breakpoint($screen) {
+    @media (max-width: $screen+"px") {
+      @content;
+    }
+  }
+  

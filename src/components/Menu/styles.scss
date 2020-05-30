@@ -1,28 +1,30 @@
+@import '../../assets/styles/mixin';
+@import '../../assets/styles/variable.scss';
+
 .menu-container {
     width: 93%;
-    height: 300px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-right: 5px;
   }
   
   .menu-item-container {
     width: 100%;
-    margin: 1px;
+    display: flex;
   }
   
   .menu-item {
     width: 100%;
     padding: 5px;
-    border: 1px solid #c4cdd8;
-    background-color: #E4E0E0;
-    color: black;
+    border: 1px solid $gray;
+    background-color: $lightGrey;
+    color: $black;
     margin-bottom: 2px;
   }
   
   .menu-item:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: $lightRed;
   }
 
   .search {
@@ -30,5 +32,44 @@
       margin: 10px 0;
   }
   .items {
-      width: 100%;
+    width: 80%;
   }
+
+.btnLang {
+  position: absolute;
+  top: 35px;
+  padding: 15px;
+  right: 30px;
+}
+
+.selected {
+  background-color: $red;
+}
+
+@include media_breakpoint(479) {
+  .menu-container {width: 90%; }
+  .menu-item {width: 100%;}
+  .items {width: 100%; font-size: 11px;}
+  .menu-item-container {width: 100%; flex-direction: column; align-items: center; justify-content: center;}
+}
+
+@include media_breakpoint(479) {
+  .menu-container {width: 90%; }
+  .menu-item {width: 100%;}
+  .items {width: 100%; font-size: 11px;}
+  .menu-item-container {width: 100%; flex-direction: column; align-items: center; justify-content: center;}
+}
+
+@include media_breakpoint(767) {
+  .menu-container {width: 90%; align-items: center; justify-content: center;}
+  .menu-item {width: 40%;}
+  .items {width: 100%; font-size: 14px;}
+  .menu-item-container {width: 100%;}
+}
+
+@include media_breakpoint(991) {
+  .menu-container {width: 90%; align-items: center; justify-content: center;}
+  .menu-item {width: 40%;}
+  .items {width: 100%; font-size: 14px;}
+  .menu-item-container {width: 100%;}
+}

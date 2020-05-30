@@ -1,0 +1,34 @@
+@import '../../assets/styles/variable.scss';
+@import '../../assets/styles/mixin';
+
+.loader{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    color: $white;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    background-color: $black;
+    opacity: 0.6;
+    border-radius: 20px;
+}
+.loader img{
+    width: 100px;
+}
+.loader h4{
+    font-weight: 600;
+    color: $lightGrey;
+}
+.loader.show{
+    display: flex;
+}
+
+@include media_breakpoint(476) { 
+    .loader {top: 0px;}
+}
+@include media_breakpoint(1024) { 
+    .loader {top: 0px;}
+}

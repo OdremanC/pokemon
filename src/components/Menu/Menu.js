@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.scss';
 
 /**
@@ -6,6 +6,11 @@ import './styles.scss';
  * @param { Object } props
  */
 function Menuitems({data = [], callback = () => {}}){
+  const [selected, setSelected] = useState(false);
+  const handleClick = (item, key) => {
+    setSelected(key);
+    callback(item);
+  }
   return(
     <div className="menu-item-container">
       {
@@ -13,8 +18,8 @@ function Menuitems({data = [], callback = () => {}}){
           return (
             <div 
               key={key} 
-              onClick={() => callback(item)} 
-              className="menu-item"
+              onClick={() => handleClick(item, key)} 
+              className={`menu-item ${selected === key && 'selected'}`}
               data={item}
             >
               { item.name }
@@ -32,9 +37,6 @@ function MenuApp(props) {
   }
   return(
     <div className="menu-container">
-      <div className="search">
-        Search
-      </div>
       <div className="items">
           <Menuitems {...props} callback={(value)=> handlePokemonSelected(value)}/>
       </div>
