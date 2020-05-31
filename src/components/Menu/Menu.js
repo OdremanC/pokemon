@@ -22,6 +22,7 @@ function Menuitems({data = [], callback = () => {}}){
               className={`menu-item ${selected === key && 'selected'}`}
               data={item}
             >
+              <div className='pokeball'></div>
               { item.name }
             </div>            
           ) 

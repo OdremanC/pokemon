@@ -26,16 +26,13 @@
   
 @include media_breakpoint(490) { 
     .paginator li a{ font-size: 11px; }
-    .paginator { margin-bottom: 15%;}
 }
 
 @include media_breakpoint(767) { 
     .paginator li a{ font-size: 14px; }
-    .paginator { margin-bottom: 15%;}
 }
 
 
 @include media_breakpoint(1024) { 
     .paginator li a{ font-size: 14px; }
-    .paginator { margin-bottom: 15%;}
 }

@@ -6,7 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-right: 5px;
   }
   
   .menu-item-container {
@@ -16,15 +15,22 @@
   
   .menu-item {
     width: 100%;
-    padding: 5px;
-    border: 1px solid $gray;
-    background-color: $lightGrey;
-    color: $black;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    color: #000;
     margin-bottom: 2px;
+    position: relative;
+    font-size: 14px;
+    text-transform: capitalize;
   }
-  
-  .menu-item:hover {
-    background-color: $lightRed;
+
+  .pokeball{
+    @include background('../../assets/images/ball.png', center); 
+    background-size: 130px;
+    padding: 10px;
+    position: absolute;
+    left: -5px;
   }
 
   .search {
@@ -42,34 +48,24 @@
   right: 30px;
 }
 
-.selected {
-  background-color: $red;
-}
-
-@include media_breakpoint(479) {
-  .menu-container {width: 90%; }
-  .menu-item {width: 100%;}
-  .items {width: 100%; font-size: 11px;}
-  .menu-item-container {width: 100%; flex-direction: column; align-items: center; justify-content: center;}
-}
-
-@include media_breakpoint(479) {
-  .menu-container {width: 90%; }
-  .menu-item {width: 100%;}
-  .items {width: 100%; font-size: 11px;}
-  .menu-item-container {width: 100%; flex-direction: column; align-items: center; justify-content: center;}
-}
-
-@include media_breakpoint(767) {
-  .menu-container {width: 90%; align-items: center; justify-content: center;}
-  .menu-item {width: 40%;}
-  .items {width: 100%; font-size: 14px;}
-  .menu-item-container {width: 100%;}
+.selected,
+.menu-item:hover {
+    font-weight: 600;
 }
 
 @include media_breakpoint(991) {
   .menu-container {width: 90%; align-items: center; justify-content: center;}
-  .menu-item {width: 40%;}
+  .menu-item {width: 40%; max-width: 136px;}
   .items {width: 100%; font-size: 14px;}
   .menu-item-container {width: 100%;}
+}
+
+
+@include media_breakpoint(767) {
+   .menu-item-container {width: 100%; flex-direction: column; align-items: center; justify-content: center;}
+}
+
+
+@include media_breakpoint(479) {
+  .items { font-size: 11px; }
 }

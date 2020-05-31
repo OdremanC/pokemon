@@ -7,6 +7,7 @@ body{ margin: 0; padding: 0; }
 
 .App {
   @include background('../../assets/images/bg.jpg');
+    background-size: cover;
     display: flex;
     text-align: center;
     flex-flow: column wrap;
@@ -15,16 +16,6 @@ body{ margin: 0; padding: 0; }
     align-items: center;
 }
   
-.search-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-  overflow-x: visible;
-  height: 40%;
-}
-
 .btnLang, .btnLang:active, .btnLang:focus{
   margin: -28px -20px 0 0;
   background-color: $transparent;
@@ -42,6 +33,7 @@ body{ margin: 0; padding: 0; }
 
 .widgets-container {
   width: 80%;
+  max-width: 980px;
   display: flex;
   height: 65vh;
   flex-direction: column;
@@ -51,6 +43,27 @@ body{ margin: 0; padding: 0; }
   position: relative;
   background: $whiteOpacity;
   border-radius: 20px;
+  .main{
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    .content{
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+  }
+  .search-container {
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    overflow-x: visible;
+    overflow-y: auto;
+    height: 40%;
+
+  }
   .logo{
       max-width: 200px;
       position: absolute;
@@ -58,13 +71,14 @@ body{ margin: 0; padding: 0; }
       z-index: 11;
   }
   .widget {
-      width: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
   }
 }
 
 .container-paginator {
-  margin-top: 25px;
-  width: 98%;
+  width: 80%;
 }
 
 .footer {
@@ -78,17 +92,34 @@ body{ margin: 0; padding: 0; }
   display: flex;
   border-radius: 20%;
 }
-
-@include media_breakpoint(608) { 
-  .search-container {width: 10%;}
+@include media_breakpoint(767){
+ 
+  .widgets-container {
+    .search-container{
+      height: 55%;
+      justify-content: space-between;
+      } 
+    .main{
+      height: 45%;
+    }
+  }
+  
 }
 
-@include media_breakpoint(479) { 
-  .search-container {width: 10%;}
-  .no-search {height: 27.5vh;}
+@include height_media_breakpoint(650){
+  .widgets-container .search-container{
+    height: 300px;
+    overflow: scroll;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    flex-direction: column;
+    flex-wrap: unset;
+  } 
 }
 
-@include media_breakpoint(420) { 
-  .search-container {width: 10%;}
-  .no-search {height: 27.5vh;}
+@include height_media_breakpoint(375){
+   .widgets-container .main{
+        overflow: auto;
+  } 
 }

@@ -11,6 +11,7 @@ import Paginator from '../../components/Paginator/Paginator';
 import Menu from '../../components/Menu/Menu';
 import Footer from '../../components/Footer/Footer';
 import Loading from '../../components/Loader/Loader';
+import WithDetails from '../../HOCs/WithDetails';
 import './App.scss';
 
 const App = () => {
@@ -21,7 +22,9 @@ const App = () => {
   const [totalPOkemons, setTotalPokemons] = useState(0);
   const [offset, setOffset] = useState(0);
   const pageCount = Math.ceil(totalPOkemons / RESULT_LIMIT);
+  
   const { t } = useTranslation();
+  const WithDetailsComp = WithDetails(Details, pokemonSelected, t);
 
   useEffect(() => {
     setLoading(true);
@@ -58,18 +61,18 @@ const App = () => {
   return (
     <div className="App">
       <div className='widgets-container'>
+        {
+          loadingState && <Loading />
+        }
         <img className='logo' src={logo} alt="Logo" />
         <button className='btnLang' onClick={(e) => { changeLanguage(e) }}>
           <img src={i18n.language === 'en' ? esflag : enflag} alt="language" />
         </button>
         <div className="main widget">
-        {
-          loadingState && <Loading />
-        }
           <section className="content">
             {
               pokemonSelected.id ?
-                <Details 
+                <WithDetailsComp 
                   t={t}
                   selected={pokemonSelected}
                   detail={pokemonDetails}
